@@ -1,0 +1,12 @@
+server:
+   port: 8099
+   
+zuul:
+   host:
+    connect-timeout-millis: 200000
+    socket-timeout-millis: 200000
+   routes:
+    crud:
+      path: /micro-crud/**
+      sensitiveHeaders:
+      url: http://localhost:8080/
